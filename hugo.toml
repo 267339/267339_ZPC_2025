@@ -1,0 +1,4 @@
+baseURL = 'https://267339.github.io/Web-3_0/'
+languageCode = 'cz-cs'
+title = 'Moje portfolio ZPC'
+theme = "gokarna"
