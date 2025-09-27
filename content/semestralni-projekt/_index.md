@@ -24,4 +24,4 @@ Ve své rešerši jsem našel pouze jednu firmu, která takový systém vyrábí
 
 **Hrubý schématický návrh systému:**
 
-![alt text](/images/hrubykoncept.jpg)
+![achjo :(u mě to fungovalo)]({{ "images/hrubykoncept.jpg" | relURL }})
