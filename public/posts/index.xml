@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Moje portfolio ZPC</title>
+    <title>Posts on Jak vyrobit (téměř) cokoliv</title>
     <link>https://267339.github.io/Web-3_0/posts/</link>
-    <description>Recent content in Posts on Moje portfolio ZPC</description>
+    <description>Recent content in Posts on Jak vyrobit (téměř) cokoliv</description>
     <generator>Hugo</generator>
-    <language>cz-cs</language>
-    <lastBuildDate></lastBuildDate>
+    <language>cs</language>
+    <lastBuildDate>Sat, 27 Sep 2025 11:00:00 +0200</lastBuildDate>
     <atom:link href="https://267339.github.io/Web-3_0/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2D grafika a řezání</title>
+      <link>https://267339.github.io/Web-3_0/posts/second-post/</link>
+      <pubDate>Sat, 27 Sep 2025 11:00:00 +0200</pubDate>
+      <guid>https://267339.github.io/Web-3_0/posts/second-post/</guid>
+      <description>&lt;p&gt;2D grafika a řezání&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ahoj světe!?</title>
+      <link>https://267339.github.io/Web-3_0/posts/my-first-post/</link>
+      <pubDate>Mon, 22 Sep 2025 14:23:45 +0200</pubDate>
+      <guid>https://267339.github.io/Web-3_0/posts/my-first-post/</guid>
+      <description>&lt;p&gt;Vítejte u mého prvního článku na webu. Toto je ukázkový příspěvek.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

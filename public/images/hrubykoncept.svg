@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <rect width="100%" height="100%" fill="#f7f7f7" />
+  <rect x="10" y="10" width="780" height="280" fill="#fff" stroke="#ccc" />
+  <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#333" dy="0.35em">Hrubý koncept (placeholder)</text>
+  <text x="50%" y="65%" font-size="14" text-anchor="middle" fill="#666">Replace /static/images/hrubykoncept.svg with your hrubykoncept.jpg when ready</text>
+</svg>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regulátor tlaku pneumatik jízdního kola - Jak vyrobit (téměř) cokoliv</title>
+<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script><meta name="description" content="">
+    <meta property="og:url" content="https://267339.github.io/Web-3_0/semestralni-projekt/">
+  <meta property="og:site_name" content="Jak vyrobit (téměř) cokoliv">
+  <meta property="og:title" content="Regulátor tlaku pneumatik jízdního kola">
+  <meta property="og:description" content="Systém pro monitorování tlaku a huštění pneumatik poháněný samotnou jízdou na kole. Problém:
+Pneumatiky jízdního kola časem ztrácí tlak, jehož úbytek je zveličen různými vlastnostmi jízdního kola, jako jsou jeho kvalita nebo stáří. Nízký tlak v pneumatikách způsobuje vyšší valivý odpor, tudíž musí cyklista vyvodit větší výkon pro dosažení obdobné rychlosti s optimálním tlakem v pneumatikách. Dofukování pneumatik ruční pumpičkou nebo kompresorem je celkem otravné a navíc optimální tlak občas závisí na vlastnostech povrchu sjížděné cesty. Cíl:">
+  <meta property="og:locale" content="cs">
+  <meta property="og:type" content="website">
+
+<link rel="alternate" type="application/rss+xml" href="/Web-3_0/semestralni-projekt/index.xml" title="Jak vyrobit (téměř) cokoliv">
+
+<link rel="shortcut icon" href="/Web-3_0/favicon.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel="stylesheet" href="/Web-3_0/css/style.css">
+<link rel="stylesheet" href="/Web-3_0/css/v2-styles.css">
+
+
+    
+    
+
+
+    <link rel="stylesheet" href="/Web-3_0/css/custom.css">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/Web-3_0/" title="Jak vyrobit (téměř) cokoliv" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Jak vyrobit (téměř) cokoliv</div>
+					<div class="logo__tagline">Jakub Dostálek</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+  <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="/Web-3_0/semestralni-projekt/">Semestrální projekt</a>
+          
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/Web-3_0/projekty/">Projekty</a>
+          
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/Web-3_0/o-mne/">O mně</a>
+          
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/Web-3_0/github/">GitHub</a>
+          
+        </li>
+  </ul>
+</nav>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">Regulátor tlaku pneumatik jízdního kola</h1>
+	</header>
+	<div class="content main__content clearfix">
+		<h5 id="systém-pro-monitorování-tlaku-a-huštění-pneumatik-poháněný-samotnou-jízdou-na-kole"><em><strong>Systém pro monitorování tlaku a huštění pneumatik poháněný samotnou jízdou na kole.</strong></em></h5>
+<p><strong>Problém:</strong></p>
+<ul>
+<li>Pneumatiky jízdního kola časem ztrácí tlak, jehož úbytek je zveličen různými vlastnostmi jízdního kola, jako jsou jeho kvalita nebo stáří. Nízký tlak v pneumatikách způsobuje vyšší valivý odpor, tudíž musí cyklista vyvodit větší výkon pro dosažení obdobné rychlosti s optimálním tlakem v pneumatikách.</li>
+<li>Dofukování pneumatik ruční pumpičkou nebo kompresorem je celkem otravné a navíc optimální tlak občas závisí na vlastnostech povrchu sjížděné cesty.</li>
+</ul>
+<p><strong>Cíl:</strong></p>
+<ul>
+<li>Návrh systému, který monitoruje tlak v pneumatice a pokud klesne pod nastavenou hodnotu systém automaticky nahustí pneumatiku využitím části výkonu vyvozeného člověkem na pedály jízdního kola při jízdě.</li>
+<li>Další funkce systému může být nastavení požadovaného tlaku cyklistou odpovídající vlastnostem povrchu, po kterém cyklista jede (nízký tlak = lepší tlumení = lepší jízdní komfort na hrbolatém povrchu, vysoký tlak = nižší valivý odpor = snažší jízda na hladkém povrchu)</li>
+</ul>
+<p><strong>Požadavky na systém:</strong></p>
+<ul>
+<li>minimální údržba</li>
+<li>co nejmenší zásah do stávající konstrukce jízdního kola</li>
+<li>voděodolnost a odolnost proti nečistotám (prach, bláto)</li>
+<li>systém nesmí spotřebovávat moc velkou část výkonu vyvozeného cyklistou, protože by nemusel zvládnout jízdu do kopce a zároveň pohon systému</li>
+</ul>
+<p><strong>Existuje již takový systém na trhu?</strong></p>
+<p>Ve své rešerši jsem našel pouze jednu firmu, která takový systém vyrábí. Společnost GRAAVA produkuje systém Kinetic Air Pressure System (KAPS), který splňuje všechny požadavky s jedním háčkem. Tím je možná až astronomická cena 4000 €. Když zapomenu na cenu celý systém vypadá velmi robustně, ale protože je celý v nábojích kola nemůžu se jím inspirovat, protože si myslím, že je možné navrhnout levnější systém, který je připevněn na rámu kola.</p>
+<p><strong>Hrubý schématický návrh systému:</strong></p>
+<p><img src="/images/hrubykoncept.jpg" alt="alt text"></p>
+
+	</div>
+</main>
+
+
+			</div>
+			
+<aside class="sidebar">
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/Web-3_0/posts/second-post/">2D grafika a řezání</a></li>
+			<li class="widget__item"><a class="widget__link" href="/Web-3_0/posts/my-first-post/">Ahoj světe!?</a></li>
+		</ul>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2025 Jak vyrobit (téměř) cokoliv.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/mansoorbarri/roadster/" rel="nofollow noopener" target="_blank">Roadster</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/Web-3_0/js/menu.js"></script>
+</body>
+</html>

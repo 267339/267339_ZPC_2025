@@ -1,0 +1,52 @@
+/* Make sidebar widgets smaller and more compact */
+.sidebar {
+  /* slightly narrower sidebar */
+  flex: 1 0 28%;
+}
+
+/* Widget title smaller */
+.widget__title,
+.widget-recent .widget__title,
+.widget-taglist .widget__title,
+.widget__title {
+  font-size: 14px;
+  font-size: .875rem;
+  margin-bottom: 8px;
+}
+
+/* Widget content and list compact */
+.widget__content,
+.widget__list,
+.widget__item,
+.widget__link {
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 0;
+  padding: 0;
+}
+
+.widget__list li.widget__item {
+  margin-bottom: 6px;
+}
+
+/* Make tag buttons smaller */
+.widget-taglist__link,
+.widget-taglist__link .btn,
+.widget-taglist .widget__link-btn,
+.widget-taglist__link.widget__link.btn {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* Reduce spacing inside recent posts widget */
+.widget-recent .widget__list li.widget__item a.widget__link {
+  padding: 0;
+}
+
+/* Adjust authorbox avatar if present */
+.authorbox img,
+.widget .authorbox img {
+  max-width: 48px;
+  width: 48px;
+  height: 48px;
+}

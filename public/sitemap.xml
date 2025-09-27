@@ -2,13 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://267339.github.io/Web-3_0/</loc>
-    <lastmod>2025-09-22T14:23:45+02:00</lastmod>
+    <loc>https://267339.github.io/Web-3_0/posts/second-post/</loc>
+    <lastmod>2025-09-27T11:00:00+02:00</lastmod>
   </url><url>
     <loc>https://267339.github.io/Web-3_0/posts/</loc>
+    <lastmod>2025-09-27T11:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://267339.github.io/Web-3_0/</loc>
+    <lastmod>2025-09-27T11:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://267339.github.io/Web-3_0/posts/my-first-post/</loc>
     <lastmod>2025-09-22T14:23:45+02:00</lastmod>
   </url><url>
     <loc>https://267339.github.io/Web-3_0/categories/</loc>
+  </url><url>
+    <loc>https://267339.github.io/Web-3_0/projekty/</loc>
+  </url><url>
+    <loc>https://267339.github.io/Web-3_0/o-mne/</loc>
+  </url><url>
+    <loc>https://267339.github.io/Web-3_0/github/</loc>
+  </url><url>
+    <loc>https://267339.github.io/Web-3_0/semestralni-projekt/</loc>
   </url><url>
     <loc>https://267339.github.io/Web-3_0/tags/</loc>
   </url>
