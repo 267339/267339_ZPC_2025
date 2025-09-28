@@ -17,4 +17,3 @@ Ve výuce se studenti seznámí a pracují s:
 - Elektronikou, senzory, akčními členy, programováním mikrokontrolérů
 
 Výuka probíhá v dílnách strojLABu — vybavených zařízeními pro digitální výrobu.
-
