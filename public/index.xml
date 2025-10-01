@@ -9,14 +9,14 @@
     <lastBuildDate>Sat, 27 Sep 2025 11:00:00 +0200</lastBuildDate>
     <atom:link href="https://267339.github.io/267339_ZPC_2025/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2D grafika a řezání</title>
+      <title>Mini úkol 2</title>
       <link>https://267339.github.io/267339_ZPC_2025/posts/second-post/</link>
       <pubDate>Sat, 27 Sep 2025 11:00:00 +0200</pubDate>
       <guid>https://267339.github.io/267339_ZPC_2025/posts/second-post/</guid>
-      <description>&lt;p&gt;2D grafika a řezání&lt;/p&gt;</description>
+      <description>&lt;h5 id=&#34;2d-grafika-a-řezání&#34;&gt;2D GRAFIKA A ŘEZÁNÍ&lt;/h5&gt;&#xA;&lt;img src=&#34;https://267339.github.io/267339_ZPC_2025/images/vektorizovanaruze.png&#34; alt=&#34;Hrubý schématický návrh systému&#34; style=&#34;float: right; margin: 10px;&#34; width=&#34;185&#34;&gt;&#xD;&#xA;&lt;img src=&#34;https://267339.github.io/267339_ZPC_2025/images/ruzepapir.jpg&#34; alt=&#34;Hrubý schématický návrh systému&#34; style=&#34;float: right; margin: 10px;&#34; width=&#34;200&#34;&gt;&#xD;&#xA;&lt;p&gt;V tomto mini projektu jsem se seznámil se základy tvoření 2D grafiky v softwaru Inkscape, konkrétně s vektorizací rastrového obrazu pro další použití na plotteru. Dále jsem byl seznámen s funkcí a obsluhou plotteru na vinylové fólie.&lt;/p&gt;&#xA;&lt;p&gt;Dále jsem si vybral obrázek růže na internetu, nakreslil na papír a zvíraznil centropenem pro lepší kontrast, který poté zjednoduší vektorizaci. JPEG fotku jsem vložil do Inkscape a po vektorizaci a další úpravě jsem získal SVG soubor pro plotter.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Ahoj světe!?</title>
+      <title>Ahoj světe!? - Mini úkol 1</title>
       <link>https://267339.github.io/267339_ZPC_2025/posts/my-first-post/</link>
       <pubDate>Mon, 22 Sep 2025 14:23:45 +0200</pubDate>
       <guid>https://267339.github.io/267339_ZPC_2025/posts/my-first-post/</guid>

@@ -50,3 +50,33 @@
   width: 48px;
   height: 48px;
 }
+
+p {
+  text-align: justify;
+  text-indent: 2em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* static/css/custom.css (testovací) */
+article p, .post-body p, .entry-content p, main p, p {
+  text-align: justify !important;
+  text-indent: 2em !important;
+  margin-top: 0.8em !important;
+  margin-bottom: 0.8em !important;
+} 
+
+.img-row {
+  display: flex;
+  flex-wrap: wrap;   /* umožní zalamování na další řádek */
+  gap: 10px;
+}
+
+.img-row img {
+  margin: 5px;
+}
+
+.img-row img.break {
+  flex-basis: 100%;  /* tenhle obrázek skočí na nový řádek */
+  margin-left: auto; /* zarovnání doprava */
+}

@@ -2,4 +2,4 @@
 title = "haha"
 +++
 
-# **Seznam mnou vypracovaných projektů**
+# **Seznam vypracovaných mini projektů**

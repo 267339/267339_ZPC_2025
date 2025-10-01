@@ -12,7 +12,7 @@ readmore = false
 authorbox = true
 pager = true
 post_meta = ["date"]
-CustomHeadHTML = "<link rel=\"stylesheet\" href=\"/Web-3_0/css/custom.css\">"
+CustomHeadHTML = "<link rel=\"stylesheet\" href=\"/267339_ZPC_2025/css/custom.css\">"
 mainSections = ["posts"]
 [params.author]
 
@@ -39,7 +39,7 @@ recent_num = 5
 
 
 [[menu.main]]
-	name = "Projekty"
+	name = "mini projekty"
 	url = "/projekty/"
 	weight = 20
 
@@ -52,3 +52,8 @@ recent_num = 5
 	name = "GitHub"
 	url = "/github/"
 	weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
