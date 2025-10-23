@@ -6,13 +6,20 @@
     <description>Recent content in Welcome to ZPC 2025 on Jak vyrobit (téměř) cokoliv</description>
     <generator>Hugo</generator>
     <language>cs</language>
-    <lastBuildDate>Sat, 27 Sep 2025 11:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 19 Oct 2025 22:20:27 +0200</lastBuildDate>
     <atom:link href="https://267339.github.io/267339_ZPC_2025/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Mini úkol 3</title>
+      <link>https://267339.github.io/267339_ZPC_2025/posts/treti-mini-ukol/</link>
+      <pubDate>Sun, 19 Oct 2025 22:20:27 +0200</pubDate>
+      <guid>https://267339.github.io/267339_ZPC_2025/posts/treti-mini-ukol/</guid>
+      <description>&lt;h5 id=&#34;řezání-na-laseru&#34;&gt;ŘEZÁNÍ NA LASERU&lt;/h5&gt;&#xA;&lt;p&gt;Cílem tohoto mini úkolu bylo si osvojit práci na laserové řezačce. Proto jsme si měli vymyslet nějaký objekt, který je možné vyrobit z laserem nařezané lepenky bez použití lepidla.&lt;/p&gt;&#xA;&lt;p&gt;Kvůli vlastnosem lepenky jsem při vymýšlení objektu měl v podstatě dvě možnosti a to buď vyrobit &amp;ldquo;okrasnou&amp;rdquo; věc pokud se dá jakákoliv věc z lepenky považovat za okrasnou. Druhou možností bylo vyrobit něco praktického. Taková praktičtější věc vyrobitelná z lepenky mě napadla při prohrabování se v šuplíku. Jsou to děliče do konkrétního úložiště a pro každé specifické rozložení vhodné pro efektivnější uskladnění věcí.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Mini úkol 2</title>
-      <link>https://267339.github.io/267339_ZPC_2025/posts/second-post/</link>
+      <link>https://267339.github.io/267339_ZPC_2025/posts/druhy-post/</link>
       <pubDate>Sat, 27 Sep 2025 11:00:00 +0200</pubDate>
-      <guid>https://267339.github.io/267339_ZPC_2025/posts/second-post/</guid>
+      <guid>https://267339.github.io/267339_ZPC_2025/posts/druhy-post/</guid>
       <description>&lt;h5 id=&#34;2d-grafika-a-řezání&#34;&gt;2D GRAFIKA A ŘEZÁNÍ&lt;/h5&gt;&#xA;&lt;img src=&#34;https://267339.github.io/267339_ZPC_2025/images/vektorizovanaruze.png&#34; alt=&#34;Hrubý schématický návrh systému&#34; style=&#34;float: right; margin: 10px;&#34; width=&#34;185&#34;&gt;&#xD;&#xA;&lt;img src=&#34;https://267339.github.io/267339_ZPC_2025/images/ruzepapir.jpg&#34; alt=&#34;Hrubý schématický návrh systému&#34; style=&#34;float: right; margin: 10px;&#34; width=&#34;200&#34;&gt;&#xD;&#xA;&lt;p&gt;V tomto mini projektu jsem se seznámil se základy tvoření 2D grafiky v softwaru Inkscape, konkrétně s vektorizací rastrového obrazu pro další použití na plotteru. Dále jsem byl seznámen s funkcí a obsluhou plotteru na vinylové fólie.&lt;/p&gt;&#xA;&lt;p&gt;Dále jsem si vybral obrázek růže na internetu, nakreslil na papír a zvíraznil centropenem pro lepší kontrast, který poté zjednoduší vektorizaci. JPEG fotku jsem vložil do Inkscape a po vektorizaci a další úpravě jsem získal SVG soubor pro plotter.&lt;/p&gt;</description>
     </item>
     <item>
