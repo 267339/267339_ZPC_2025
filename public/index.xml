@@ -6,8 +6,15 @@
     <description>Recent content in Welcome to ZPC 2025 on Jak vyrobit (téměř) cokoliv</description>
     <generator>Hugo</generator>
     <language>cs</language>
-    <lastBuildDate>Sun, 19 Oct 2025 22:20:27 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 25 Oct 2025 13:37:45 +0200</lastBuildDate>
     <atom:link href="https://267339.github.io/267339_ZPC_2025/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mini úkol 4</title>
+      <link>https://267339.github.io/267339_ZPC_2025/posts/ctvrty-mini-ukol/</link>
+      <pubDate>Sat, 25 Oct 2025 13:37:45 +0200</pubDate>
+      <guid>https://267339.github.io/267339_ZPC_2025/posts/ctvrty-mini-ukol/</guid>
+      <description>&lt;h5 id=&#34;3d-tisk-jednoduchého-mechanismu&#34;&gt;3D TISK JEDNODUCHÉHO MECHANISMU&lt;/h5&gt;&#xA;&lt;p&gt;V tomto mini úkolu jsme měli navrhnout jednoduchý mechanismus, zpracovat ho vhodně pro 3D tisk, připravit ve sliceru a nakonec vytisknout.&lt;/p&gt;&#xA;&lt;h6 id=&#34;nápad-peek-a-meow&#34;&gt;Nápad: Peek-A-Meow&lt;/h6&gt;&#xA;&lt;p&gt;Otočením kolečka vykoukne roztomilá kočka a poté zase zaleze.&#xA;&lt;img src=&#34;https://267339.github.io/267339_ZPC_2025/images/cat.png&#34;&#xA;alt=&#34;Hrubý schématický návrh systému&#34;&#xA;style=&#34;display: block; margin-left: auto; margin-right: auto;&#34;&#xA;width=&#34;400&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Z tohoto vyplívá, že mechanismus bude muset převádět rotační pohyb na vratný lineární. Tímto se výběr mechanismu zúžil na vačkový, klikový nebo kulisový.&lt;/p&gt;&#xA;&lt;p&gt;Po nezdařených pokusech s vačkovým mechanismem, se kterým byl největší kámen úrazu pružina tlačící na vačku. Sice jsem se snažil navrhnout a vytisknout použitelnou pružinu z PLA ale marně, tudíž jsem se spíše rozhodl pro klikový mechanismus.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Mini úkol 3</title>
       <link>https://267339.github.io/267339_ZPC_2025/posts/treti-mini-ukol/</link>
