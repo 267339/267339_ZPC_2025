@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="container semestralni-projekt">
+    <div class="content-wrapper">
+        <div class="main-content">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+        <aside class="toc-sidebar">
+            <h3>Obsah</h3>
+            {{ .TableOfContents }}
+        </aside>
+    </div>
+</div>
+{{ end }}
+
+{{ define "sidebar" }}{{ end }}

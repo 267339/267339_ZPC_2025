@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head><script src="/267339_ZPC_2025/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=267339_ZPC_2025/livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mini úkol 5 - Jak vyrobit (téměř) cokoliv</title>
+<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script><meta name="description" content="">
+    <meta property="og:url" content="http://localhost:1313/267339_ZPC_2025/posts/paty-mini-ukol/">
+  <meta property="og:site_name" content="Jak vyrobit (téměř) cokoliv">
+  <meta property="og:title" content="Mini úkol 5">
+  <meta property="og:description" content="Návrh a programování obvodu s mikrokontrolerem Pro tento mini úkol jsem se rozhodl navrhnout maketu obvodu, který bych mohl využít v mém semestrálním projektu, kde potřebuji nějaké uživatelské rozhraní se samotným zařízením. Pro účel tohoto mini úkolu jsem se rozhodl, že komunikace zařízení s uživatelem bude zprostředkována LCD displejem, potenciometrem, dvěma tlačítky a LED diodou. Na displeji bude zobrazen “tlak v pneumatikách” a optimální tlak, který je nastaven pomocí potenciometru. Jelikož v programu Tinkercad není manometr musel jsem ho nahradit potenciometrem. Dvě tlačítka slouží ke změně tlaku v nádrži a LED svítí pokud je “tlak v pneumatikách” stejný jako optimální tlak.">
+  <meta property="og:locale" content="cs">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-15T16:10:45+02:00">
+    <meta property="article:modified_time" content="2025-11-15T16:10:45+02:00">
+
+
+<link rel="shortcut icon" href="/267339_ZPC_2025/favicon.ico">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel="stylesheet" href="/267339_ZPC_2025/css/style.css">
+<link rel="stylesheet" href="/267339_ZPC_2025/css/v2-styles.css">
+
+
+    
+
+
+    <link rel="stylesheet" href="/267339_ZPC_2025/css/custom.css">
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/267339_ZPC_2025/" title="Jak vyrobit (téměř) cokoliv" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Jak vyrobit (téměř) cokoliv</div>
+					<div class="logo__tagline">Jakub Dostálek</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+  <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="/267339_ZPC_2025/semestralni-projekt/">Semestrální projekt</a>
+          
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/267339_ZPC_2025/projekty/">mini projekty</a>
+          
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/267339_ZPC_2025/o-mne/">O mně</a>
+          
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/267339_ZPC_2025/github/">GitHub</a>
+          
+        </li>
+  </ul>
+</nav>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Mini úkol 5</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-11-15T16:10:45&#43;02:00">November 15, 2025</time></div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<h5 id="návrh-a-programování-obvodu-s-mikrokontrolerem">Návrh a programování obvodu s mikrokontrolerem</h5>
+<p>Pro tento mini úkol jsem se rozhodl navrhnout maketu obvodu, který bych mohl využít v mém semestrálním projektu, kde potřebuji nějaké uživatelské rozhraní se samotným zařízením. Pro účel tohoto mini úkolu jsem se rozhodl, že komunikace zařízení s uživatelem bude zprostředkována LCD displejem, potenciometrem, dvěma tlačítky a LED diodou. Na displeji bude zobrazen &ldquo;tlak v pneumatikách&rdquo; a optimální tlak, který je nastaven pomocí potenciometru. Jelikož v programu Tinkercad není manometr musel jsem ho nahradit potenciometrem. Dvě tlačítka slouží ke změně tlaku v nádrži a LED svítí pokud je &ldquo;tlak v pneumatikách&rdquo; stejný jako optimální tlak.</p>
+<img src="/267339_ZPC_2025/images/zapojenyobvod.png" alt="Hrubý schématický návrh systému" style="float">
+<p>Arduino kód:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// maketa uživatelského rozhraní
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// LCD piny: RS, DB5, DB4, DB3, DB2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;LiquidCrystal.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>LiquidCrystal <span style="color:#a6e22e">lcd</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// funkce pro desetinná čísla
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> <span style="color:#a6e22e">mapFloat</span>(<span style="color:#66d9ef">float</span> x, <span style="color:#66d9ef">float</span> in_min, <span style="color:#66d9ef">float</span> in_max, <span style="color:#66d9ef">float</span> out_min, <span style="color:#66d9ef">float</span> out_max) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (x <span style="color:#f92672">-</span> in_min) <span style="color:#f92672">*</span> (out_max <span style="color:#f92672">-</span> out_min) <span style="color:#f92672">/</span> (in_max <span style="color:#f92672">-</span> in_min) <span style="color:#f92672">+</span> out_min;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// piny
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> MANOMETR <span style="color:#f92672">=</span> A1;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> OPT_TLAK <span style="color:#f92672">=</span> A0;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> PLUS_TLAK <span style="color:#f92672">=</span> <span style="color:#ae81ff">7</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> MINUS_TLAK <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> LED <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// systém
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> t;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> posledniZobrazeni <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> zpravaZobrazena <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> PERIODA_ZPRAVY <span style="color:#f92672">=</span> <span style="color:#ae81ff">1500</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> PERIODA_bezZPRAVY <span style="color:#f92672">=</span> <span style="color:#ae81ff">5000</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> posledniZmena_PLUS <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> posledniZmena_MINUS <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// tlačítka
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">bool</span> NATLAKOVANI <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> UPUSTITTLAK <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> DELTA_TLAK <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>; <span style="color:#75715e">// integer odpovídající NATLAKOVÁNÍ + UPUSTITTLAK
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> INTERVAL_ZMENY <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>; <span style="color:#75715e">// čas za, který se ubere/přidá hodnota
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// &#34;manometr&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> MANOMETR_VAL;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> TLAK_NADOBY;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> TLAK_NADOBYzaokr;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> TLAK_NADOBYzaokr_DELTA;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// nastavení optimálního tlaku
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> POT_OPT;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> TLAK_OPTIMALNI;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> TLAK_OPTIMALNIzaokr;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//setup pinů a lcd
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  pinMode (PLUS_TLAK, INPUT_PULLUP);
+</span></span><span style="display:flex;"><span>  pinMode (MINUS_TLAK, INPUT_PULLUP);
+</span></span><span style="display:flex;"><span>  pinMode (LED, OUTPUT);
+</span></span><span style="display:flex;"><span>  lcd.begin(<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>  lcd.print(<span style="color:#e6db74">&#34;Startuji&#34;</span>);
+</span></span><span style="display:flex;"><span>  delay(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  lcd.clear();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  t <span style="color:#f92672">=</span> millis();
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// přečtení a mapování hodnoty &#34;manometru&#34; na příslušné jednotky (bary)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  MANOMETR_VAL <span style="color:#f92672">=</span> analogRead(MANOMETR);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">float</span> TLAK_NADOBY <span style="color:#f92672">=</span> mapFloat(MANOMETR_VAL, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1023</span>, <span style="color:#ae81ff">0.0</span>, <span style="color:#ae81ff">5.0</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">float</span> TLAK_NADOBYzaokr <span style="color:#f92672">=</span> round(TLAK_NADOBY<span style="color:#f92672">*</span><span style="color:#ae81ff">10.0</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">10.0</span>; <span style="color:#75715e">//zaokrouhlení hodnoty na 1 desetinné místo
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// přečtení a mapování hodnoty potenciometru pro nastavení optimálního tlaku na příslušné jednotky (bary)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  POT_OPT <span style="color:#f92672">=</span> analogRead(OPT_TLAK);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">float</span> TLAK_OPTIMALNI <span style="color:#f92672">=</span> mapFloat(POT_OPT, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1023</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">float</span> TLAK_OPTIMALNIzaokr <span style="color:#f92672">=</span> round(TLAK_OPTIMALNI<span style="color:#f92672">*</span><span style="color:#ae81ff">10.0</span>)<span style="color:#f92672">/</span><span style="color:#ae81ff">10.0</span>; <span style="color:#75715e">//zaokrouhlení hodnoty na 1 desetinné místo
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// stav tlačítek
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  NATLAKOVANI <span style="color:#f92672">=</span> <span style="color:#f92672">!</span>digitalRead(PLUS_TLAK);
+</span></span><span style="display:flex;"><span>  UPUSTITTLAK <span style="color:#f92672">=</span> <span style="color:#f92672">!</span>digitalRead(MINUS_TLAK);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// pokud je zmačknuto natlakování k delta se přídává 0.1 každý interval
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> ((NATLAKOVANI <span style="color:#f92672">==</span> HIGH) <span style="color:#f92672">&amp;&amp;</span> (t <span style="color:#f92672">-</span> posledniZmena_PLUS <span style="color:#f92672">&gt;=</span> INTERVAL_ZMENY)) {
+</span></span><span style="display:flex;"><span>    DELTA_TLAK <span style="color:#f92672">+=</span> <span style="color:#ae81ff">0.1</span>;
+</span></span><span style="display:flex;"><span>    posledniZmena_PLUS <span style="color:#f92672">=</span> t;
+</span></span><span style="display:flex;"><span>  	}
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// pokud je zmačknuto upustittlak od delta se odebírá 0.1 každý interval
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> ((UPUSTITTLAK <span style="color:#f92672">==</span> HIGH) <span style="color:#f92672">&amp;&amp;</span> (t <span style="color:#f92672">-</span> posledniZmena_MINUS <span style="color:#f92672">&gt;=</span> INTERVAL_ZMENY)) {
+</span></span><span style="display:flex;"><span>    DELTA_TLAK <span style="color:#f92672">-=</span> <span style="color:#ae81ff">0.1</span>;
+</span></span><span style="display:flex;"><span>    posledniZmena_MINUS <span style="color:#f92672">=</span> t;
+</span></span><span style="display:flex;"><span>  	}
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// sečtení delta a tlaku nadoby
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  TLAK_NADOBYzaokr_DELTA <span style="color:#f92672">=</span> TLAK_NADOBYzaokr <span style="color:#f92672">+</span> DELTA_TLAK;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// zobrazení zprávy Nastavení tlaku
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>zpravaZobrazena <span style="color:#f92672">&amp;&amp;</span> (t <span style="color:#f92672">-</span> posledniZobrazeni <span style="color:#f92672">&gt;=</span> PERIODA_bezZPRAVY)){
+</span></span><span style="display:flex;"><span>    lcd.clear();
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>  	lcd.print(<span style="color:#e6db74">&#34;Nastaveni tlaku&#34;</span>); <span style="color:#75715e">// uvede funkci zařízení
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    zpravaZobrazena <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>    posledniZobrazeni <span style="color:#f92672">=</span> t; <span style="color:#75715e">// reset časovače
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// odstranění zprávy a zobrazení tlaků
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (zpravaZobrazena <span style="color:#f92672">&amp;&amp;</span> (t <span style="color:#f92672">-</span> posledniZobrazeni <span style="color:#f92672">&gt;=</span> PERIODA_ZPRAVY)){
+</span></span><span style="display:flex;"><span>    lcd.clear();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// zobrazení řádku s tlakem
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    lcd.setCursor(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(<span style="color:#e6db74">&#34;Tlak:&#34;</span>);
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(TLAK_NADOBYzaokr_DELTA, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(<span style="color:#e6db74">&#34;bar&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// zobrazení řádku s optimálním tlakem
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    lcd.setCursor(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(<span style="color:#e6db74">&#34;Opt.tlak:&#34;</span>);
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(TLAK_OPTIMALNIzaokr, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(<span style="color:#e6db74">&#34;bar&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    zpravaZobrazena <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>    posledniZobrazeni <span style="color:#f92672">=</span> t; <span style="color:#75715e">// reset časovače
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  	}  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// zobrazení tlaků pro ostatní cykly
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>zpravaZobrazena){
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// zobrazení řádku s tlakem
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  	lcd.setCursor(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(<span style="color:#e6db74">&#34;Tlak:&#34;</span>);
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(TLAK_NADOBYzaokr_DELTA, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(<span style="color:#e6db74">&#34;bar&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// zobrazení řádku s optimálním tlakem
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    lcd.setCursor(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(<span style="color:#e6db74">&#34;Opt.tlak:&#34;</span>);
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(TLAK_OPTIMALNIzaokr, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.setCursor(<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    lcd.print(<span style="color:#e6db74">&#34;bar&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// uprava hodnot pro lepší porovnání
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> tlak_nadoby <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(TLAK_NADOBYzaokr_DELTA<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> tlak_optimalni <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(TLAK_OPTIMALNIzaokr<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// rozsvícení LED, když je tlak v nadobě = optimálnímu tlaku
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (tlak_nadoby <span style="color:#f92672">==</span> tlak_optimalni){
+</span></span><span style="display:flex;"><span>  	digitalWrite(LED, HIGH);
+</span></span><span style="display:flex;"><span>    }<span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>    digitalWrite(LED, LOW);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Odkaz na Tinkercad návrh: <a href="https://www.tinkercad.com/things/iEnRcbqYND6-glorious-blad/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard">https://www.tinkercad.com/things/iEnRcbqYND6-glorious-blad/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard</a></p>
+
+		</div>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/267339_ZPC_2025/posts/treti-mini-ukol/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Mini úkol 3</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar">
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/267339_ZPC_2025/posts/paty-mini-ukol/">Mini úkol 5</a></li>
+			<li class="widget__item"><a class="widget__link" href="/267339_ZPC_2025/posts/treti-mini-ukol/">Mini úkol 3</a></li>
+			<li class="widget__item"><a class="widget__link" href="/267339_ZPC_2025/posts/ctvrty-mini-ukol-copy/">Mini úkol 4</a></li>
+			<li class="widget__item"><a class="widget__link" href="/267339_ZPC_2025/posts/druhy.2-mini-ukol/">Mini úkol 2.2</a></li>
+			<li class="widget__item"><a class="widget__link" href="/267339_ZPC_2025/posts/druhy.1-post/">Mini úkol 2.1</a></li>
+		</ul>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2026 Jak vyrobit (téměř) cokoliv.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/mansoorbarri/roadster/" rel="nofollow noopener" target="_blank">Roadster</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/267339_ZPC_2025/js/menu.js"></script>
+</body>
+</html>

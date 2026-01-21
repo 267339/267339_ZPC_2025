@@ -1,0 +1,10 @@
+{{/*
+Child shortcode for a single tab.
+Usage: {{< tab title="Label" >}}content{{< /tab >}}
+*/}}
+{{ $title := .Get "title" | default "Tab" }}
+{{ $id := printf "rtab-%d" (now.UnixNano) }}
+<button role="tab" data-tab="{{ $id }}" aria-selected="false">{{ $title }}</button>
+<div id="{{ $id }}" class="r-tabs-panel" role="tabpanel">
+  {{ .Inner | markdownify }}
+</div>

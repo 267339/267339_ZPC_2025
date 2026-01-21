@@ -1,0 +1,15 @@
+{{/*
+Parent shortcode: wraps .Inner and provides a unique id for the tab group.
+Usage: {{< tabs >}}...{{< /tabs >}}
+*/}}
+{{ $uid := printf "r-tabs-%d" (now.UnixNano) }}
+<div class="r-tabs" id="{{ $uid }}" data-tabs>
+  <div class="r-tabs-nav" role="tablist">
+    <!-- tab buttons are emitted by the child tab shortcode -->
+  </div>
+  <div class="r-tabs-panels">
+    {{ .Inner | safeHTML }}
+  </div>
+</div>
+
+<!-- Behavior is handled by the global /js/tabs.js script. -->

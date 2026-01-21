@@ -1,0 +1,62 @@
+baseURL = 'https://267339.github.io/267339_ZPC_2025/'
+languageCode = 'cs'
+title = "Jak vyrobit (téměř) cokoliv"
+opengraph = true
+theme = "roadster"
+mainSections = ["posts"]
+[Params]
+description = "Jak vyrobyt (téměř) cokoliv"
+opengraph = true
+twitter_cards = false
+readmore = false
+authorbox = true
+pager = true
+post_meta = ["date"]
+CustomHeadHTML = "<link rel=\"stylesheet\" href=\"/267339_ZPC_2025/css/custom.css\">"
+mainSections = ["posts"]
+[params.author]
+
+name = "Jakub Dostálek"
+bio = "Student"
+avatar = "img/avatar.png"
+[Params.logo]
+
+subtitle = "Jakub Dostálek"
+[Params.sidebar]
+
+home = "right"
+list = "right"
+single = "right"
+widgets = ["recent"]
+[Params.widgets]
+
+recent_num = 5
+
+[[menu.main]]
+	name = "Semestrální projekt"
+	url = "/semestralni-projekt/"
+	weight = 10
+
+
+[[menu.main]]
+	name = "mini projekty"
+	url = "/projekty/"
+	weight = 20
+
+[[menu.main]]
+	name = "O mně"
+	url = "/o-mne/"
+	weight = 30
+
+[[menu.main]]
+	name = "GitHub"
+	url = "/github/"
+	weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 4
+    endLevel = 6

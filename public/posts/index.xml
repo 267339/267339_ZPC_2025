@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jak vyrobit (téměř) cokoliv</title>
+    <link>http://localhost:1313/267339_ZPC_2025/posts/</link>
+    <description>Recent content in Posts on Jak vyrobit (téměř) cokoliv</description>
+    <generator>Hugo</generator>
+    <language>cs</language>
+    <lastBuildDate>Sat, 15 Nov 2025 16:10:45 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/267339_ZPC_2025/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mini úkol 5</title>
+      <link>http://localhost:1313/267339_ZPC_2025/posts/paty-mini-ukol/</link>
+      <pubDate>Sat, 15 Nov 2025 16:10:45 +0200</pubDate>
+      <guid>http://localhost:1313/267339_ZPC_2025/posts/paty-mini-ukol/</guid>
+      <description>&lt;h5 id=&#34;návrh-a-programování-obvodu-s-mikrokontrolerem&#34;&gt;Návrh a programování obvodu s mikrokontrolerem&lt;/h5&gt;&#xA;&lt;p&gt;Pro tento mini úkol jsem se rozhodl navrhnout maketu obvodu, který bych mohl využít v mém semestrálním projektu, kde potřebuji nějaké uživatelské rozhraní se samotným zařízením. Pro účel tohoto mini úkolu jsem se rozhodl, že komunikace zařízení s uživatelem bude zprostředkována LCD displejem, potenciometrem, dvěma tlačítky a LED diodou. Na displeji bude zobrazen &amp;ldquo;tlak v pneumatikách&amp;rdquo; a optimální tlak, který je nastaven pomocí potenciometru. Jelikož v programu Tinkercad není manometr musel jsem ho nahradit potenciometrem. Dvě tlačítka slouží ke změně tlaku v nádrži a LED svítí pokud je &amp;ldquo;tlak v pneumatikách&amp;rdquo; stejný jako optimální tlak.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini úkol 3</title>
+      <link>http://localhost:1313/267339_ZPC_2025/posts/treti-mini-ukol/</link>
+      <pubDate>Tue, 04 Nov 2025 16:27:45 +0200</pubDate>
+      <guid>http://localhost:1313/267339_ZPC_2025/posts/treti-mini-ukol/</guid>
+      <description>&lt;h5 id=&#34;3d-skenování-a-úprava-sítě-bodů&#34;&gt;3D SKENOVÁNÍ A ÚPRAVA SÍTĚ BODŮ&lt;/h5&gt;&#xA;&lt;p&gt;Cílem mini úkolu bylo naskenovat zadaný objekt a poté ho vhodně upravit a oměřit v softwaru GOM inspect.&lt;/p&gt;&#xA;&lt;p&gt;Jako objekt pro skenování jsem si vybral sádrový odlitek obličeje. Při přípravě na skenování jsem postupoval podle návodu, tudíž jsem odlitek obličeje polepil zepředu malými body, aby byl povrch mesh sítě po zaplátování děr co nejblíže reálnéhu objektu. Zadní část odliku jsem polepil většími body, protože je laser lépe snímá a není tak důležité aby zadní povrch odpovídal realitě.&#xA;(Na vyfocení olepeného modelu jsem ve spěchu zapomněl, dodělám pokud bude potřeba)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini úkol 4</title>
+      <link>http://localhost:1313/267339_ZPC_2025/posts/ctvrty-mini-ukol-copy/</link>
+      <pubDate>Sat, 25 Oct 2025 13:37:45 +0200</pubDate>
+      <guid>http://localhost:1313/267339_ZPC_2025/posts/ctvrty-mini-ukol-copy/</guid>
+      <description>&lt;h5 id=&#34;3d-tisk-jednoduchého-mechanismu&#34;&gt;3D TISK JEDNODUCHÉHO MECHANISMU&lt;/h5&gt;&#xA;&lt;p&gt;V tomto mini úkolu jsme měli navrhnout jednoduchý mechanismus, zpracovat ho vhodně pro 3D tisk, připravit ve sliceru a nakonec vytisknout.&lt;/p&gt;&#xA;&lt;h6 id=&#34;nápad-peek-a-meow&#34;&gt;Nápad: Peek-A-Meow&lt;/h6&gt;&#xA;&lt;p&gt;Otočením kolečka vykoukne roztomilá kočka a poté zase zaleze.&#xA;&lt;img src=&#34;http://localhost:1313/267339_ZPC_2025/images/cat.png&#34;&#xA;alt=&#34;Hrubý schématický návrh systému&#34;&#xA;style=&#34;display: block; margin-left: auto; margin-right: auto;&#34;&#xA;width=&#34;400&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Z tohoto vyplívá, že mechanismus bude muset převádět rotační pohyb na vratný lineární. Tímto se výběr mechanismu zúžil na vačkový, klikový nebo kulisový.&lt;/p&gt;&#xA;&lt;p&gt;Po nezdařených pokusech s vačkovým mechanismem, se kterým byl největší kámen úrazu pružina tlačící na vačku. Sice jsem se snažil navrhnout a vytisknout použitelnou pružinu z PLA ale marně, tudíž jsem se spíše rozhodl pro klikový mechanismus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini úkol 2.2</title>
+      <link>http://localhost:1313/267339_ZPC_2025/posts/druhy.2-mini-ukol/</link>
+      <pubDate>Sun, 19 Oct 2025 22:20:27 +0200</pubDate>
+      <guid>http://localhost:1313/267339_ZPC_2025/posts/druhy.2-mini-ukol/</guid>
+      <description>&lt;h5 id=&#34;řezání-na-laseru&#34;&gt;ŘEZÁNÍ NA LASERU&lt;/h5&gt;&#xA;&lt;p&gt;Cílem tohoto mini úkolu bylo si osvojit práci na laserové řezačce. Proto jsme si měli vymyslet nějaký objekt, který je možné vyrobit z laserem nařezané lepenky bez použití lepidla.&lt;/p&gt;&#xA;&lt;p&gt;Kvůli vlastnosem lepenky jsem při vymýšlení objektu měl v podstatě dvě možnosti a to buď vyrobit &amp;ldquo;okrasnou&amp;rdquo; věc pokud se dá jakákoliv věc z lepenky považovat za okrasnou. Druhou možností bylo vyrobit něco praktického. Taková praktičtější věc vyrobitelná z lepenky mě napadla při prohrabování se v šuplíku. Jsou to děliče do konkrétního úložiště a pro každé specifické rozložení vhodné pro efektivnější uskladnění věcí.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mini úkol 2.1</title>
+      <link>http://localhost:1313/267339_ZPC_2025/posts/druhy.1-post/</link>
+      <pubDate>Sat, 27 Sep 2025 11:00:00 +0200</pubDate>
+      <guid>http://localhost:1313/267339_ZPC_2025/posts/druhy.1-post/</guid>
+      <description>&lt;h5 id=&#34;2d-grafika-a-řezání-na-plotteru&#34;&gt;2D GRAFIKA A ŘEZÁNÍ NA PLOTTERU&lt;/h5&gt;&#xA;&lt;img src=&#34;http://localhost:1313/267339_ZPC_2025/images/vektorizovanaruze.png&#34; alt=&#34;Hrubý schématický návrh systému&#34; style=&#34;float: right; margin: 10px;&#34; width=&#34;185&#34;&gt;&#xD;&#xA;&lt;img src=&#34;http://localhost:1313/267339_ZPC_2025/images/ruzepapir.jpg&#34; alt=&#34;Hrubý schématický návrh systému&#34; style=&#34;float: right; margin: 10px;&#34; width=&#34;200&#34;&gt;&#xD;&#xA;&lt;p&gt;V tomto mini úkolu jsem se seznámil se základy tvoření 2D grafiky v softwaru Inkscape, konkrétně s vektorizací rastrového obrazu pro další použití na plotteru. Dále jsem byl seznámen s funkcí a obsluhou plotteru na vinylové fólie.&lt;/p&gt;&#xA;&lt;p&gt;Dále jsem si vybral obrázek růže na internetu, nakreslil na papír a zvíraznil centropenem pro lepší kontrast, který poté zjednoduší vektorizaci. JPEG fotku jsem vložil do Inkscape a po vektorizaci a další úpravě jsem získal SVG soubor pro plotter.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ahoj světe!? - Mini úkol 1</title>
+      <link>http://localhost:1313/267339_ZPC_2025/posts/my-first-post/</link>
+      <pubDate>Mon, 22 Sep 2025 14:23:45 +0200</pubDate>
+      <guid>http://localhost:1313/267339_ZPC_2025/posts/my-first-post/</guid>
+      <description>&lt;p&gt;Vítejte u mého prvního článku na webu. Toto je ukázkový příspěvek.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Regulátor tlaku pneumatik jízdního kola (stará stránka semestrálního projektu)</title>
+      <link>http://localhost:1313/267339_ZPC_2025/posts/stara-stranka-semestralniho-projektu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/267339_ZPC_2025/posts/stara-stranka-semestralniho-projektu/</guid>
+      <description>&lt;h5 id=&#34;systém-pro-monitorování-tlaku-a-huštění-pneumatik-poháněný-samotnou-jízdou-na-kole&#34;&gt;&lt;em&gt;&lt;strong&gt;Systém pro monitorování tlaku a huštění pneumatik poháněný samotnou jízdou na kole.&lt;/strong&gt;&lt;/em&gt;&lt;/h5&gt;&#xA;&lt;p&gt;&lt;strong&gt;Problém:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Pneumatiky jízdního kola časem ztrácí tlak, jehož úbytek je zveličen různými vlastnostmi jízdního kola, jako jsou jeho kvalita nebo stáří. Nízký tlak v pneumatikách způsobuje vyšší valivý odpor, tudíž musí cyklista vyvodit větší výkon pro dosažení obdobné rychlosti s optimálním tlakem v pneumatikách.&lt;/li&gt;&#xA;&lt;li&gt;Dofukování pneumatik ruční pumpičkou nebo kompresorem je celkem otravné a navíc optimální tlak občas závisí na vlastnostech povrchu sjížděné cesty.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cíl:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
